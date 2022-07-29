@@ -1,0 +1,66 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "7fb4516d-cf7e-4076-9b2c-c8976f887c1d",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 15,
+      "y": 20
+    },
+    "snapToGrid": false,
+    "ActionMetadata": {
+      "7fb4516d-cf7e-4076-9b2c-c8976f887c1d": {
+        "position": {
+          "x": 170,
+          "y": 116
+        },
+        "overrideConsoleVoice": false,
+        "defaultVoice": "None"
+      },
+      "7f9f6981-a5b4-4ae5-b9dc-f44527b0a6cb": {
+        "position": {
+          "x": 417,
+          "y": 117
+        },
+        "useDynamic": true
+      },
+      "3cf6320c-ad5a-4c1c-bc83-46c18cb20ce2": {
+        "position": {
+          "x": 653,
+          "y": 27
+        }
+      }
+    }
+  },
+  "Actions": [
+    {
+      "Identifier": "7fb4516d-cf7e-4076-9b2c-c8976f887c1d",
+      "Parameters": {
+        "TextToSpeechVoice": "Takumi"
+      },
+      "Transitions": {
+        "NextAction": "7f9f6981-a5b4-4ae5-b9dc-f44527b0a6cb",
+        "Errors": [],
+        "Conditions": []
+      },
+      "Type": "UpdateContactTextToSpeechVoice"
+    },
+    {
+      "Identifier": "7f9f6981-a5b4-4ae5-b9dc-f44527b0a6cb",
+      "Parameters": {
+        "Text": "$.Attributes.message"
+      },
+      "Transitions": {
+        "NextAction": "3cf6320c-ad5a-4c1c-bc83-46c18cb20ce2",
+        "Errors": [],
+        "Conditions": []
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "3cf6320c-ad5a-4c1c-bc83-46c18cb20ce2",
+      "Type": "DisconnectParticipant",
+      "Parameters": {},
+      "Transitions": {}
+    }
+  ]
+}
