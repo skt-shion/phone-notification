@@ -3,7 +3,7 @@ import os
 
 import boto3
 
-DEST_PHONE_NUMBER = "+xxxxxxxxxxxx"
+DEST_PHONE_NUMBER = "+81xxxxxxxxxx"
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
